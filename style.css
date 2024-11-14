@@ -69,3 +69,19 @@
   --font-size-3xl: 3rem;
   --font-size-4xl: 3.5rem;
 }
+body{
+    margin: 0;
+    background-image: url("/images/bg-pattern-top-mobile.svg");
+    background-repeat: no-repeat;
+}
+@media (min-width:1300px){
+    body{
+        margin: 0;
+        background-image: url("/images/bg-pattern-top-desktop.svg") , url("/images/bg-pattern-bottom-mobile.svg");
+        background-repeat: no-repeat, no-repeat;
+        background-position: -3.5rem -0.5rem , 28rem 5rem;
+        background-attachment: fixed, fixed;
+        background-size: 40%, 70%;
+        
+    }
+}
