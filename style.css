@@ -87,37 +87,58 @@ body{
 }
 section{
     min-height: 100vh;
-    display: grid;
-    place-items: center;
-    gap: var(--gap-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* display: grid;
+    place-items: center; */
+}
+.profile-pic{
+    width: 15%;
+    border-radius: 50%;
 }
 /* Container Styles */
 .main-container-1,.main-container-2{
-    border:1px solid red;
+    /* border:1px solid red; */
     padding: var(--padding-md);
 }
 
 .main-container-1{
     
     display: grid;
-    grid-template-columns: 22rem 40rem;
+    grid-template-columns: 22rem 35rem;
     column-gap: var(--gap-lg);
 }
+.main-container-2{
+   
+    display: flex;
+    gap: var(--gap-md);
+}
 .text-box,.rating-div{
-    border:1px solid blue;
+    /* border:1px solid blue; */
     padding: var(--padding-xs);
 }
 .card{
-    border:1px solid green;
-    padding: var(--padding-sm);
+   
+    padding: var(--padding-lg);
+    max-width: 20rem;
+    background-color: var(--primary-magenta);
+    color: white;
+    border-radius: var(--border-radius-md);
+    transform: translateY(var(--stagger-offset, 0));
 }
 .profile-div{
-    border:1px solid black;
+    display: flex;
+    align-items: center;
     padding: var(--padding-xs);
 }
 .rating-div{
     padding: var(--padding-sm);
     display: grid;
+    
+
+    grid-template-rows: 2.5rem 2.5rem 2.5rem;
     gap: var(--gap-sm);
 }
 .box{
@@ -131,6 +152,7 @@ section{
     border-radius: var(--border-radius-sm);
     transform: translateX(var(--stagger-offset, 0));
 }
+
 .box:nth-child(1){
     --stagger-offset: 0;
 }
@@ -140,10 +162,16 @@ section{
 .box:nth-child(3){
     --stagger-offset: 160px; 
 }
-.text-box{
-    max-width: 25rem;
-}
 
+.card:nth-child(1){
+    --stagger-offset: 0;
+}
+.card:nth-child(2){
+    --stagger-offset: 20px; 
+}
+.card:nth-child(3){
+    --stagger-offset: 35px; 
+}
 /* text styles */
 .heading{
     font-size: 2.5rem;
@@ -155,4 +183,13 @@ section{
 .rating{
     color: var(--primary-magenta);
     font-weight: 700;
+}
+.name-div{
+    margin-left: var(--margin-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs);
+}
+.bio{
+    color: var(--primary-soft-pink);
 }
