@@ -151,17 +151,20 @@ section{
     max-width: 22rem;
     background-color: var(--neutral-light-greyish-magenta);
     border-radius: var(--border-radius-sm);
-    transform: translateX(var(--stagger-offset, 0));
+    transform: translateX(var(--stagger-offset-X, 0));
 }
 
 .box:nth-child(1){
-    --stagger-offset: 0;
+    --stagger-offset-X: 0;
+   
 }
 .box:nth-child(2){
-    --stagger-offset: 80px; 
+    --stagger-offset-X: 80px;
+   
 }
 .box:nth-child(3){
-    --stagger-offset: 160px; 
+    --stagger-offset-X: 160px;
+   
 }
 
 .card:nth-child(1){
@@ -208,18 +211,19 @@ section{
         gap: var(--gap-sm);
        
     }
+    
     .text-box{
         max-width: 22rem;
     }
-    
+   
     .box:nth-child(1){
-        --stagger-offset: 0;
+        --stagger-offset-X: 0;
     }
     .box:nth-child(2){
-        --stagger-offset: 0px; 
+        --stagger-offset-X: 0px; 
     }
     .box:nth-child(3){
-        --stagger-offset: 0px; 
+        --stagger-offset-X: 0px; 
     }
     .rating{
         font-size: var(--font-size-sm);
